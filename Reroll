@@ -76,6 +76,6 @@ repeat task.wait(10) until game:IsLoaded()
     Player.OnTeleport:Connect(function(state)
         print(state, queueteleport)
         if state == Enum.TeleportState.InProgress and queueteleport then 
-            queueteleport("repeat task.wait(10) loadstring(game:HttpGet(''))()")
+            queueteleport("repeat task.wait(10) loadstring(game:HttpGet('https://raw.githubusercontent.com/9Dion/Regenroll/main/Reroll'))()")
         end 
     end)
