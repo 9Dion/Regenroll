@@ -1,4 +1,4 @@
-repeat task.wait(10) until game:IsLoaded()
+repeat task.wait() until game:IsLoaded()
     
     local Player = game.Players.LocalPlayer
     local lib = loadstring(game:GetObjects("rbxassetid://7657867786")[1].Source)()
@@ -76,6 +76,6 @@ repeat task.wait(10) until game:IsLoaded()
     Player.OnTeleport:Connect(function(state)
         print(state, queueteleport)
         if state == Enum.TeleportState.InProgress and queueteleport then 
-            queueteleport("repeat task.wait(10) loadstring(game:HttpGet('https://raw.githubusercontent.com/9Dion/Regenroll/main/Reroll'))()")
+            queueteleport("repeat task.wait() until game:IsLoaded() loadstring(game:HttpGet('https://raw.githubusercontent.com/9Dion/Regenroll/main/Reroll'))()")
         end 
     end)
